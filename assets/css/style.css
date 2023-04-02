@@ -586,7 +586,6 @@ text-transform: uppercase;
 }
 .service {
 background: rgba(255, 255, 255, 0.2) none repeat scroll 0 0;
-height: 300px;
 margin: 20px 0;
 padding: 30px;
 transition: all 0.4s ease 0s;

@@ -28,8 +28,10 @@ Version      : 1.0
 			$(window).on('scroll', function() {
 			  if ($(this).scrollTop() > 100) {
 				$('.menu-top').addClass('menu-shrink');
+				$('#logo').attr('src', 'assets/img/logo.png');
 			  } else {
 				$('.menu-top').removeClass('menu-shrink');
+				$('#logo').attr('src', 'assets/img/logo-inverted.png');		
 			  }
 			});
 			
