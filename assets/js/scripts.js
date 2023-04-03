@@ -91,9 +91,7 @@
 			};
 			let submit = true;
 			fields.forEach(field => {
-				console.log('Test')
 				if (!$(`#${field}`).val() || !pattern.test($('#email').val())) {
-					console.log('here')
 					submit = false;
 					$('#danger').show('slow', 'swing', function(){
 						setTimeout(()=> {$('#danger').hide('slow')}, 1000);
@@ -104,14 +102,13 @@
 				}
 			})
 			if (submit) {
-				console.log(body)
 				fetch('https://email-servo.herokuapp.com/codemavericks', {
 					method: 'POST',
 					headers: {
 						'Accept': 'application/json',
 						'Content-Type': 'application/json'
 					},
-					body: body
+					body: JSON.stringify(body)
 				})
 					.then(response => response.json())
 					.then(response => console.log(JSON.stringify(response)))
