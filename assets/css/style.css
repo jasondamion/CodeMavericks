@@ -1321,6 +1321,11 @@ padding: 20px 0;
     box-shadow: 0 0 0 0px #CC181E;
     border: 1px solid #CC181E;
 }
+.f_instagram:hover {
+    background: #833AB4;
+    box-shadow: 0 0 0 0px #833AB4;
+    border: 1px solid #833AB4;
+}
 .f_skype:hover {
     background: #00AFF0;
     box-shadow: 0 0 0 0px #00AFF0;
