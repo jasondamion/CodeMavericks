@@ -102,6 +102,7 @@
 				}
 			})
 			if (submit) {
+				$('#submitButton').hide('slow');
 				fetch('https://email-servo.herokuapp.com/codemavericks', {
 					method: 'POST',
 					headers: {
