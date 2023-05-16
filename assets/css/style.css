@@ -844,7 +844,9 @@ width: 70px;
 @media only screen and (max-width:768px) { 
     .counter p { font-size: 13px }
 }
-
+.feature{
+    padding: 60px 20px;
+}
 .counter:hover i{background:none;color:#00acc2;border:2px solid #00acc2}
 /*
 * ----------------------------------------------------------------------------------------
