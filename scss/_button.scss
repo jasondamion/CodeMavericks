@@ -1,0 +1,79 @@
+.theme-btn{
+    display:inline-flex;
+    justify-content: center;
+    text-align: center;
+    white-space: nowrap;
+    transition:all 0.3s ease;
+    @include title-font;
+    .btn-title {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+}
+
+/*Btn Style One*/
+.btn-style-one {
+    position: relative;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 20px 50px;
+    letter-spacing: .1em;
+    font-weight: 700;
+    overflow: hidden;
+    z-index: 0;
+    text-transform: uppercase;
+    color: var(--theme-color-light);
+    background: var(--theme-color1);
+    &:before {
+        position: absolute;
+        top: 0;
+        left: -5%;
+        right: auto;
+        bottom: auto;
+        width: 110%;
+        height: 200%;
+        background: var(--theme-color2);
+        transform-origin: left bottom;
+        transform: skewY(-10deg) scale(1, 0);
+        transition: transform .5s;
+        content: "";
+        z-index: -1;
+    }
+    i{
+        position: relative;
+        top: 1px;
+        display: block;
+        margin-left: 10px;
+        transform: rotate(45deg);
+    }
+    &:hover:before {
+        transform-origin: left top;
+        transform: skewY(-10deg) scale(1, 1);
+    }
+    &:hover {
+        color: #ffffff;
+    }
+    &.dark-bg{
+        background-color: var(--theme-color2);
+        &::before{background-color: var(--bg-theme-color1);}
+    }
+    &.light-bg{
+        background-color: var(--theme-color-light);
+        color: var(--theme-color2);
+        &:hover{color: var(--theme-color-light);}
+        &::before{background-color: var(--theme-color2);}
+    }
+    &.hover-light{
+        &:hover{color: var(--theme-color2);}
+        &:before{background-color: var(--theme-color-light);}
+    }
+}
+
+
+
+.theme-btn.small{
+    padding: 10px 30px;
+    line-height: 20px;
+    font-size: 10px;
+}

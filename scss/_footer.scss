@@ -1,0 +1,377 @@
+
+/***
+
+==================================================================
+	Main Footer
+==================================================================
+
+***/
+
+.main-footer{
+	position: relative;
+	background-color: var(--theme-color2);
+	.footer-upper{
+		position: relative;
+		padding: 30px 0 0;
+		border-bottom: 1px solid rgba(255,255,255, .10);
+	}
+
+	/* Widget Section */
+	.widgets-section{
+		position: relative;
+		padding:100px 0 40px;
+	}
+	.footer-column {
+		position: relative;
+		margin-bottom: 50px;
+	}
+	.footer-widget {
+		position: relative;
+	}
+
+	.widget-title {
+		position: relative;
+		font-weight: 700;
+		color: #ffffff;
+		line-height: 1.2em;
+		margin-bottom: 27px;
+	}
+}
+
+.contact-info-block{
+	position: relative;
+	margin-bottom: 30px;
+	.inner{
+		position: relative;
+		padding-left: 80px;
+		@include media-breakpoint-down(sm){
+			padding-left: 0;
+			text-align: center;
+		}
+		.icon{
+			position: absolute;
+			left: 0;
+			top: 0;
+			font-size: 48px;
+			color: var(--theme-color1);
+			@include media-breakpoint-down(sm){
+				position: relative;
+				display: inline-block;
+				margin-bottom: 20px;
+			}
+		}
+		.text{
+			font-size: 15px;
+			color: #848484;
+			line-height: 24px;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			@include media-breakpoint-down(sm){
+				align-items: center;
+			}
+			a{
+				color: #848484;
+				&:hover{color: var(--theme-color-light);}
+			}
+		}
+	}
+}
+
+
+.main-footer .about-widget{
+	position: relative;
+	.logo{
+		margin-bottom: 25px;
+	}
+	.text{
+		font-weight: 500;
+		color: #848484;
+		margin-bottom: 30px;
+	}
+	.contact-info {
+		position: relative;
+
+		li {
+			position: relative;
+			padding: 5px 0;
+			padding-left: 50px;
+			font-size: 16px;
+			line-height: 27px;
+			color: #ffffff;
+			font-weight: 700;
+			margin-bottom: 10px;
+			transition: all 300ms ease;
+			a {
+				color: inherit;
+				font-weight: 700;
+				transition:none;
+			}
+
+			i {
+				position: absolute;
+				left: 0;
+				top: 0;
+				height: 37px;
+				width: 37px;
+				background-color: #182838;
+				color: var(--theme-color2);
+				font-size: 16px;
+				line-height: 37px;
+				text-align: center;
+				transition: all 300ms ease;
+				border-radius: 50%;
+			}
+
+			&:hover {
+				color: var(--theme-color2);
+			}
+		}
+	}
+}
+
+/*=== User LInks ===*/
+.user-links {
+	position: relative;
+	li {
+		position: relative;
+		font-size: 15px;
+		line-height: 24px;
+		color: #8f8f8f;
+		font-weight: 400;
+		margin-bottom: 10px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+		a {
+			position: relative;
+			display: inline-block;
+			color: inherit;
+			transition: all 300ms ease;
+			&:hover {
+				color: #FFFFFF;
+			}
+			&:before {
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				width: 0;
+				height: 1px;
+				background-color: var(--bg-theme-color1);
+				content: "";
+				transition: all 300ms ease;
+			}
+			&:hover:before {
+				width: 100%;
+			}
+		}
+	}
+}
+
+/* Gallery Widget */
+
+.gallery-widget {
+	position: relative;
+	.outer {
+		position: relative;
+		padding-top: 5px;
+		margin: 0px -7px 0;
+		.image {
+			position: relative;
+			float: left;
+			width: 33.3333%;
+			padding: 0px 7px;
+			margin-bottom: 14px;
+		}
+	}
+	.image {
+		img {
+			display: block;
+			width: 100%;
+		}
+		a {
+			position: relative;
+			display: block;
+			overflow: hidden;
+			&:before {
+				position: absolute;
+				left: 0;
+				top: 0;
+				height: 100%;
+				width: 100%;
+				background: var(--bg-theme-color1) padding-box content-box;
+				opacity: 0.8;
+				content: "";
+				transform: scale(0);
+				transition: all 300ms ease;
+			}
+			&:hover {
+				&:before {
+					transform: scale(1);
+				}
+				&:after {
+					transform: scale(1);
+				}
+			}
+			&:after {
+				position: absolute;
+				height: 20px;
+				width: 20px;
+				left: 50%;
+				top: 50%;
+				margin-left: -10px;
+				margin-top: -10px;
+				content: "\f0c1";
+				text-align: center;
+				line-height: 20px;
+				font-size: 18px;
+				color: #FFFFFF;
+				font-weight: 900;
+				font-family: "Font Awesome 6 Pro";
+				transform: scale(0);
+				transition: all 300ms ease;
+			}
+		}
+	}
+}
+
+.newsletter-widget{
+	position: relative;
+	padding-left: 70px;
+	@include media-breakpoint-down(xl){
+		padding-left: 20px;
+	}
+	@include media-breakpoint-down(lg){
+		padding-left: 0;
+	}
+	.text{
+		color: #8f8f8f;
+		margin-bottom: 20px;
+	}
+}
+
+/* Subscribe Form */
+.subscribe-form {
+	position: relative;
+	.form-group {
+		position: relative;
+		margin-bottom: 0;
+		input[type=text],
+		input[type=email] {
+			position: relative;
+			display: block;
+			height: 60px;
+			width: 100%;
+			font-size: 14px;
+			line-height: 30px;
+			color: #717070;
+			padding: 20px 30px;
+			padding-right: 60px;
+			background: #fff;
+			transition: all 300ms ease;
+			&::placeholder {
+				color: #717070;
+			}
+		}
+		.theme-btn {
+			position: absolute;
+			right: 10px;
+			top: 50%;
+			margin-top: -20px;
+			height: 40px;
+			width: 40px;
+			line-height: 40px;
+			font-size: 14px;
+			border-radius: 50%;
+			color: #ffffff;
+			display: block;
+			text-align: center;
+			background: var(--bg-theme-color1);
+			&:hover{
+				color: #FFFFFF;
+			}
+		}
+	}
+}
+
+
+/*=== Footer Bottom ===*/
+.footer-bottom {
+	position: relative;
+	z-index: 3;
+	background-color: #0f0f0f;
+	padding: 35px 0;
+	.copyright-text {
+		position: relative;
+		font-size: 15px;
+		line-height: 24px;
+		padding: 13px 15px;
+		font-weight: 500;
+		color: #848484;
+		margin-bottom: 0;
+		@include media-breakpoint-down(md){
+			text-align: center;
+			padding-bottom: 0;
+		}
+		a {
+			color: inherit;
+			&:hover {
+				color: #ffffff;
+			}
+		}
+	}
+
+	.links-column,
+	.logo-column{
+		@include media-breakpoint-down(md){
+			order: 0 !important;
+		}
+	}
+	.footer-logo{
+		@include flex-center;
+		min-height: 50px;
+	}
+
+	.footer-links{
+		position: relative;
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		justify-content: flex-end;
+		padding: 13px 0;
+		@include media-breakpoint-down(md){
+			justify-content: center;
+		}
+		li {
+			position: relative;
+			font-size: 15px;
+			line-height: 24px;
+			color: #848484;
+			padding-left: 17px;
+			margin-left: 17px;
+			font-weight: 500;
+			&:before {
+				position: absolute;
+				left: -3px;
+				top: 0;
+				font-weight: 500;
+				content: "/";
+			}
+			&:first-child {
+				padding-left: 0;
+				margin-left: 0;
+				&:before{display: none;}
+			}
+			a {
+				position: relative;
+				display: inline-block;
+				color: inherit;
+				font-weight: 500;
+				transition: all 300ms ease;
+				&:hover {
+					color: #FFFFFF;
+				}
+			}
+		}
+	}
+}

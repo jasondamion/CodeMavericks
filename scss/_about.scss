@@ -1,0 +1,612 @@
+/*** 
+
+====================================================================
+		About Section
+====================================================================
+
+***/
+
+.about-section {
+    position: relative;
+    padding: 100px 0 50px;
+    &:before{
+        position: absolute;
+        right: 0;
+        top: -40px;
+        width: 367px;
+        height: 730px;
+        background-image: url(../images/icons/dots1.png);
+        content: "";
+    }
+    .content-column {
+        position: relative;
+        margin-bottom: 50px;
+        z-index: 1;
+        @include media-breakpoint-down(lg){
+            order: 0 !important;
+        }
+        .inner-column {
+            position: relative;
+            padding-left: 70px;
+            @include media-breakpoint-down(xl){
+                padding-left: 0;
+            }
+        }
+        .sec-title{
+            margin-bottom: 30px;
+        }
+
+        .other-info{
+            position: relative;
+            padding-right: 200px;
+            @include media-breakpoint-down(md){
+                padding-right: 0;
+                .theme-btn{
+                    width: 100%;
+                }
+            }
+        }
+        .info-box{
+            position: relative;
+            border-top: 6px solid var(--theme-color1);
+            padding-top: 14px;
+            padding-left: 50px;
+            margin-bottom: 30px;
+            &:hover{
+                .icon{
+                    color: var(--theme-color2);
+                }
+            }
+            .icon{
+                position: absolute;
+                left: 0;
+                top: 30px;
+                color: var(--theme-color1);
+                line-height: 1em;
+                font-size: 32px;
+                transition: all 300ms ease;
+            }
+            .title{
+                display: block;
+                font-size: 12px;
+                font-weight: 500;
+                text-transform: uppercase;
+                letter-spacing: .1em;
+                margin-bottom: 0;
+            }
+            .info-text{
+                font-size: 20px;
+                font-weight: 700;
+                color: var(--theme-color2);
+                transition: all 300ms ease;
+                &:hover{
+                    color: var(--theme-color1);
+                }
+            }
+        }
+
+        .founded-year {
+            position: absolute;
+            right: 0;
+            top: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+            width: 170px;
+            height: 136px;
+            padding-top: 30px;
+            margin-left: 30px;
+            @include media-breakpoint-down(md){
+                position: relative;
+                margin-left: 0;
+                width: 100%;
+                margin-bottom: 30px;
+            }
+            &:before {
+                content: "";
+                position: absolute;
+                top: 10px;
+                left: -10px;
+                width: 100%;
+                height: 100%;
+                border: 1px solid #e6e6e6;
+                z-index: -1;
+                transition: all 0.3s ease;
+                &:hover{
+                    top: 0;
+                    left: 0;
+                }
+            }
+            .icon{
+                color: var(--theme-color1);
+                font-size: 32px;
+                margin-bottom: 6px;
+            }
+            .title {
+                text-transform: uppercase;
+                letter-spacing: 2px;
+            }
+        }
+    }
+    .image-column {
+        position: relative;
+        margin-bottom: 50px;
+        .image-box{
+            position: relative;
+            @include media-breakpoint-down(lg){
+                text-align: center;
+            }
+            .icon-shpaes{
+                position: absolute;
+                left: -80px;
+                top: 15px;
+                height: 556px;
+                width: 247px;
+                background-image: url(../images/icons/shapes.png);
+            }
+        }
+        .image{
+            margin: 0;
+            img{
+                filter: drop-shadow(0 10px 100px rgba(0,0,0,.10));
+            }
+        }
+    }
+}
+
+/*** 
+
+====================================================================
+    About Section Two
+====================================================================
+
+***/
+
+.about-section-two{
+    position: relative;
+    padding: 120px 0 70px;    
+    &:before{
+        position: absolute;
+        right: 0;
+        top: 90px;
+        width: 367px;
+        height: 730px;
+        background-image: url(../images/icons/dots1.png);
+        content: "";
+    }
+    .content-column {
+        position: relative;
+        margin-bottom: 50px;
+        @include media-breakpoint-down(lg){
+            order: 0 !important;
+        }
+        .inner-column {
+            position: relative;
+            padding-left: 70px;
+            @include media-breakpoint-down(xl){
+                padding-left: 0;
+            }
+        }
+        .sec-title{
+            margin-bottom: 25px;
+            .other-title{
+                font-weight: 700;
+                margin-top: 35px;
+                letter-spacing: -.01em;
+                color: var(--theme-color1);
+                margin-bottom: 0;
+            }
+            .text{
+                margin-top: 12px;
+            }
+        }
+        .about-info-box{
+            position: relative;
+            margin-bottom: 25px;
+            &:hover{
+                .icon{
+                    color: var(--theme-color2);
+                    transform: rotate(180deg) scale(-1);
+                }
+            }
+            .title{
+                display: inline-block;
+                margin-bottom: 20px;
+                padding-bottom: 5px;
+                letter-spacing: -.05em;
+                border-bottom: 2px solid var(--theme-color1);
+            }
+            .inner{
+                position: relative;
+                padding-left: 95px;
+                padding-top: 10px;
+                min-height: 76px;
+                @include media-breakpoint-down(sm){
+                    padding-top: 0px;
+                }
+            }
+            .icon{
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 76px;
+                width: 76px;
+                background-color: #f4f4f4;
+                color: var(--theme-color1);
+                font-size: 42px;
+                @include flex-center;
+                border-radius: 50%;
+                transition: all 300ms ease;
+            }
+            .text{
+                font-weight: 500;
+            }
+        }
+
+        .theme-btn{
+            margin-top: 15px;
+        }
+    }
+
+    .image-column {
+        position: relative;
+        margin-bottom: 0px;
+        .inner-column{
+            position: relative;
+            padding-bottom: 130px;
+            @include media-breakpoint-down(md){
+                padding-bottom: 50px;
+            }
+        }
+        .image-1{
+            margin: 0;
+            img{
+                @include media-breakpoint-down(md){
+                    width: 100%;
+                }
+            }
+        }
+        .image-2{
+            position: absolute;
+            right: 0;
+            bottom: 0px;
+            border: 20px solid #fff;
+            border-right: 0;
+            margin-bottom: 0;
+            @include media-breakpoint-down(md){
+                display: none;
+            }
+        }
+
+        .exp-box{
+            position: absolute;
+            left: -125px;
+            bottom: 130px;
+            padding: 35px 40px;
+            background-color: var(--bg-theme-color1);
+            font-size: 20px;
+            line-height: 1.2em;
+            color: var(--theme-color-light);
+            letter-spacing: -.04em;
+            font-weight: 800;
+            background-image: url(../images/icons/lines3.png);
+            background-position: left bottom;
+            background-repeat: no-repeat;
+            @include media-breakpoint-down(xxl){
+                left: 15px;
+                bottom: 100px;
+            }
+            @include media-breakpoint-down(md){
+                position: relative;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                text-align: center;
+                &::before{display: none};
+            }
+            &:before{
+                position: absolute;
+                right: -40px;
+                bottom: 0;
+                content: "";
+                border-bottom: 50px solid var(--theme-color1);
+                border-right: 40px solid transparent;
+            }
+        }
+    }
+}
+
+/*** 
+
+====================================================================
+    About Section Three
+====================================================================
+
+***/
+
+.about-section-three{
+    position: relative;
+    padding: 120px 0 90px;
+    .bg{
+        &::before{
+            @include overlay;
+            content: "";
+            background-color: var(--theme-color2);
+            opacity: .9;
+        }
+        &.pull-up{
+            top: -160px;
+            bottom: 0;
+            height: auto;
+        }
+    }
+}
+
+.about-block{
+    position: relative;
+    margin-bottom: 30px;
+    .inner-box{
+        position: relative;
+        background-color: var(--theme-color-light);
+        padding: 25px 20px 25px;
+        padding-left: 155px;
+        box-shadow: 0 10px 60px rgba(0,0,0,.10);
+        &:before{
+            @include overlay;
+            content: "";
+            border: 2px solid var(--theme-color1);
+            z-index: 2;
+            pointer-events: none;
+            opacity: 0;
+            transition: all 300ms ease;
+        }
+        &:hover{
+            &::before{
+                opacity: 1;
+            }
+        }
+    }
+    .image{
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 130px;
+        img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+    .title{
+        margin-bottom: 12px;
+    }
+    .text{
+        @include media-breakpoint-down(sm){
+            font-size: 14px;
+            line-height: 24px;
+        }
+    }
+}
+
+
+
+/*** 
+
+====================================================================
+    About Section Four
+====================================================================
+
+***/
+
+.about-section-four{
+    position: relative;
+    padding: 120px 0 90px;
+    &:before {
+        position: absolute;
+        left: 0;
+        top: 40px;
+        width: 367px;
+        height: 730px;
+        background-image: url(../images/icons/dots1.png);
+        transform: scaleX(-1);
+        content: "";
+        @include media-breakpoint-down(lg){
+            display: none;
+        }
+    }
+    &:after{
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 532px;
+        height: 544px;
+        background-color: #f4f4f4;
+        content: "";
+        z-index: -1;
+        @include media-breakpoint-down(lg) {
+            display: none;
+        }
+    }
+    .content-column{
+        margin-bottom: 50px;
+        .inner-column{
+            padding-right: 70px;
+            @include media-breakpoint-down(xl){
+                padding-right: 0;
+            }
+        }
+        .sec-title{
+            margin-bottom: 30px;
+        }
+        .other-text{
+            font-weight: 700;
+            margin-bottom: 25px;
+        }
+        .list-style-two{
+            li{
+                font-size: 16px;
+                line-height: 24px;
+                i{
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    .image-column {
+        position: relative;
+        margin-bottom: 50px;
+        .inner-column{
+            position: relative
+        }
+        .image{
+            margin-bottom: 0;
+            img{
+                @include media-breakpoint-down(lg){
+                    width: 100%;
+                }
+            }
+        }
+        .exp-box{
+            position: absolute;
+            left: 30px;
+            bottom: -30px;
+            padding: 20px 20px;
+            background-color: #f4f4f4;
+            box-shadow: 0 10px 60px rgba(0,0,0,.05);
+            min-height: 204px;
+            width: 280px;
+            text-align: center;
+            @include media-breakpoint-down(lg){
+                position: relative;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+            }
+            &:before{
+                position: absolute;
+                top:18px;
+                left: 18px;
+                right: 18px;
+                bottom: 18px;
+                border: 2px solid var(--theme-color1);
+                background-color: #fff;
+                content: "";
+            }
+            .icon{
+                position: relative;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                width: 109px;
+                height: 120px;
+                font-size: 64px;
+                background-image: url(../images/icons/shape5.png);
+                color: var(--theme-color-light);   
+                margin: -60px auto 20px;
+            }
+            .count{
+                position: relative;
+                display: block;
+                font-size: 36px;
+                color: var(--theme-color2);
+                font-weight: 800;
+                margin-bottom: 5px;
+            }
+            .text{
+                position: relative;
+                font-size: 18px;
+                font-weight: 500;
+                line-height: 30px;
+            }
+        }
+    }
+
+    .blocks-outer{
+        position: relative;
+        padding: 70px 0 0;
+    }
+}
+
+
+/*** 
+
+====================================================================
+    About Section Five
+====================================================================
+
+***/
+
+.about-section-five{
+    position: relative;
+    padding: 120px 0 90px;
+     &:before{
+        position: absolute;
+        right: 0;
+        top: 90px;
+        width: 367px;
+        height: 730px;
+        background-image: url(../images/icons/dots1.png);
+        content: "";
+    }
+    .content-column{
+        position: relative;
+        z-index: 2;
+        @include media-breakpoint-down(lg){
+            order: 0 !important;
+        }
+        .inner-column{
+            position: relative;
+            margin-top: 65px;
+            margin-left: -70px;
+            padding-top: 80px;
+            padding-left: 80px;
+            padding-bottom: 80px;
+            background-color: #fff;
+            @include media-breakpoint-down(xl){
+                padding-top: 0;
+                margin-top: 0;
+                padding-bottom: 40px;
+            }
+            @include media-breakpoint-down(lg){
+                padding-left: 0;
+                margin-left: 0;
+            }
+        }
+        .sec-title{
+            margin-bottom: 35px;
+        }
+        .skills{
+            margin-bottom: 10px;
+        }
+    }
+
+    .image-column {
+        position: relative;
+        .inner-column{
+            position: relative;
+            margin-right: -80px;
+            @include media-breakpoint-down(lg){
+                margin-right: 0;
+                margin-top: 30px;
+            }
+        }
+        .image-1{
+            position: relative;
+            margin-bottom: 0;
+            img{
+                width: 100%;
+            }
+        }
+        .image-2{
+            position: absolute;
+            left: -80px;
+            bottom: -20px;
+            border: 20px solid #fff;
+            margin-bottom: 0;
+            @include media-breakpoint-down(xl){
+                display: none;
+            }
+        }
+    }
+}

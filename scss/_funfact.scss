@@ -1,0 +1,273 @@
+
+/*** 
+
+====================================================================
+    Fun Fact Section
+====================================================================
+
+***/
+
+.fun-fact-section{
+    position: relative;
+    padding: 100px 0 70px;
+    .bg-image{
+        &:before{
+            @include overlay;
+            background-color: var(--theme-color2);
+            opacity: .7;
+            content: "";
+            @include media-breakpoint-down(lg){
+                opacity: .95;
+            }
+        }
+    }
+    .bg-lines{
+        background-image: url(../images/icons/lines.png);
+        background-repeat: repeat-x;
+        background-size: auto;
+        background-position: center bottom;
+    }
+}
+
+//Counter BLock
+.counter-block {
+    position: relative;
+    margin-bottom: 50px;
+    .inner {
+        position: relative;
+        text-align: center;
+        &:hover{
+            .icon-box{
+                i{
+                    transform: scale(-1) rotate(180deg);
+                }
+            }
+            .counter-title{
+                opacity: 1;
+            }
+        }
+    }
+    .icon-box{
+        position: relative;
+        @include flex-center;
+        height: 140px;
+        width: 130px;
+        background-image: url(../images/icons/shape2.png);
+        font-size: 52px;
+        color: var(--theme-color1);
+        margin: 0 auto 15px;
+        i{
+            position: relative;
+            display: block;
+            transition: all 300ms ease;
+        }
+    }
+    .count-box {
+        position: relative;
+        display: inline-block;
+        font-size: 36px;
+        font-weight: 800;
+        line-height: 1em;
+        transition: all 300ms ease;
+        color: #fff;
+        .count-text {
+            font-size:36px;
+            font-weight: 800;
+            line-height: 1em;
+            transition: all 300ms ease;
+        }
+    }
+    .counter-title {
+        display: block;
+        font-size: 18px;
+        line-height: 24px;
+        color: var(--theme-color-light);
+        font-weight: 500;
+        margin-top: 7px;
+        margin-bottom: 0;
+        opacity: .5;
+        transition: all 300ms ease;
+    }
+}
+
+
+/*** 
+
+====================================================================
+    Fun Fact Section Two
+====================================================================
+
+***/
+
+.fun-fact-section-two{
+    position: relative;
+    .upper-box{
+        position: relative;
+        padding: 100px 0 100px;
+        @include media-breakpoint-down(lg){
+            padding-bottom: 50px;
+        }
+        .bg-image{
+            &::before{
+                @include overlay;
+                background-color: var(--theme-color2);
+                opacity: .9;
+                content: "";
+            }
+        }
+        .sec-title{
+            h2{
+                @include media-breakpoint-down(xxl){
+                    br{display: none;}
+                }
+            }
+        }
+
+        .title-column{
+            margin-bottom: 60px;
+        }
+        .content-column{
+            margin-bottom: 40px;
+        }
+    }
+    .fact-counter{
+        position: relative;       
+        background-color: #fff;
+        box-shadow: 0 10px 60px rgba(0,0,0,.10);
+        z-index: 9;
+        @include media-breakpoint-down(lg){
+            padding-top: 50px;
+        }
+        .counter-block-two{
+            position: relative;
+            margin-top: -60px;
+            @include media-breakpoint-down(lg){
+                margin-top: 0;
+            }
+        }
+    }
+}
+
+.about-us-tabs{
+    position: relative;
+    .tab-btns{
+        position: relative;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: 40px;
+        .tab-btn{
+            position: relative;
+            font-size: 16px;
+            line-height: 20px;
+            color: rgba(255,255,255,.50);
+            border:1px solid rgba(255,255,255,.50);
+            font-weight: 700;
+            padding: 10px 25px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 300ms ease;
+            @include media-breakpoint-down(sm){
+                width: 100%;
+                margin-right: 0;
+            }
+            &.active-btn{
+                background-color: #fff;
+                color: var(--theme-color2);
+            }
+        }
+    }
+
+    .content-box{
+        position: relative;
+        padding-left: 245px;
+        @include media-breakpoint-down(md){
+            padding-left: 0;
+        }
+        .image-box{
+            position: absolute;
+            left:0;
+            top: 0;
+            @include media-breakpoint-down(md){
+                position: relative;
+                display: inline-block;
+                margin-bottom: 20px;
+            }
+        }
+        .text{
+            position: relative;
+            top: -8px;
+            color: rgba(255,255,255,.70);
+            margin-bottom: 17px;
+        }
+        .list-style-two{
+            li{
+                padding-left: 35px;
+                color: #fff;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 26px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+//Counter BLock Two
+.counter-block-two{
+    position: relative;
+    margin-bottom: 50px;
+    .inner {
+        position: relative;
+        text-align: center;
+        &:hover{
+            .icon-box{
+                i{
+                    transform: scale(-1) rotate(180deg);
+                }
+            }
+        }
+    }
+    .icon-box{
+        position: relative;
+        @include flex-center;
+        width: 122px;
+        height: 135px;
+        background-image: url(../images/icons/shape7.png);
+        font-size: 52px;
+        color: var(--theme-color1);
+        margin: 0 auto 15px;
+        i{
+            position: relative;
+            display: block;
+            transition: all 300ms ease;
+        }
+    }
+    .count-box {
+        position: relative;
+        display: inline-block;
+        font-size: 36px;
+        font-weight: 800;
+        line-height: 1em;
+        transition: all 300ms ease;
+        color: var(--theme-color2);
+        .count-text {
+            font-size:36px;
+            font-weight: 800;
+            line-height: 1em;
+        }
+    }
+    .counter-title {
+        display: block;
+        font-size: 18px;
+        line-height: 24px;
+        color: var(--theme-color2);
+        font-weight: 500;
+        margin-top: 7px;
+        margin-bottom: 0;
+        opacity: .5;
+    }
+}
+

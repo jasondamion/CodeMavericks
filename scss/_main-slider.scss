@@ -1,0 +1,69 @@
+/*** 
+
+====================================================================
+  Main Slider
+====================================================================
+
+***/
+
+.main-slider {
+  position: relative;
+  h1{
+    position: relative;
+    display: block;
+    font-size: 100px;
+    line-height: 90px;
+    color: #ffffff;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    @include media-breakpoint-down(xxl){
+      font-size: 80px;
+      line-height: 1.2em;
+    }
+    @include media-breakpoint-down(lg) {
+      font-size: 72px;
+    }
+    @include media-breakpoint-down(md) {
+      font-size: 64px;
+    }
+    @include media-breakpoint-down(sm){
+      font-size: 52px;
+    }
+    @include for-xs {
+      font-size: 42px;
+    }
+    @include for-xxs{
+      font-size: 32px;
+    }
+  }
+  .text{
+    font-size: 20px;
+    font-weight: 500;
+    color: rgba(255,255,255,.70);
+    @include media-breakpoint-down(md){
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  .theme-btn{
+    @include media-breakpoint-down(md){
+      font-size: 14px;
+      line-height: 20px;
+      padding: 14px 30px;
+    }
+  }
+  
+  .tp-dottedoverlay {
+    background-color: rgba(23,23,23,.65);
+    background-image: url(../images/main-slider/overlay-shape.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+  }
+}
+
+
+
