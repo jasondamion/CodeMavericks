@@ -35,7 +35,7 @@
 </head>
 
 <body>
-    <div id="google_translate_element"></div>
+	<div id="google_translate_element"></div>
 
 	<div class="page-wrapper">
 
@@ -183,7 +183,8 @@
 							<div class="btn-box animate-3">
 								<a href="#about" class="theme-btn btn-style-one hover-light"><span
 										class="btn-title">Learn More</span></a>
-								<a target="_blank" href="https://codemavericks.corsizio.com" class="theme-btn btn-style-one hover-light"><span
+								<a target="_blank" href="https://codemavericks.corsizio.com"
+									class="theme-btn btn-style-one hover-light"><span
 										class="btn-title">Classes</span></a>
 							</div>
 						</div>
@@ -267,7 +268,7 @@
 
 							<div class="image-box">
 								<!-- <figure class="image-2"><img src="images/resource/why-us-2.png" alt=""></figure> -->
-								<figure class="image-1"><img alt="Picture of kids working together"
+								<figure class="image-1" style="text-align: center;"><img alt="Picture of kids working together"
 										src="images/resource/why-us-1.jpg" alt=""></figure>
 							</div>
 						</div>
@@ -335,20 +336,32 @@
 							<h2>Classes We Offer</h2>
 						</div>
 						<div class="col-xl-7 col-lg-12">
-							<div class="text-box">
-								<div class="text">In addition, we travel to other educational businesses to run
+								<div class="text text-center" style="color: var(--body-text-color)">In addition, we travel to other educational businesses to run
 									workshops and 6 week class cycles. Also, offering tutoring for web development and
-									computer science. More coming soon!</div>
-							</div>
+									computer science. <br> Scroll right to see more.</div>
 						</div>
 					</div>
 				</div>
 
-				<div class="row">
+				<div class="row owl-carousel class-carousel owl-theme text-center">
 					<!-- Service Block Three -->
-					<div class="service-block-three col-lg-3 col-md-6 col-sm-12">
+					<div class="service-block-three item">
 						<div class="inner-box">
-							<i class="icon flaticon-front-end"></i>
+							<img src="./images/resource/classes/ScratchJr.jpg">
+							<br>
+							<h5 class="title">Scratch Jr</h5>
+							<div class="text">Scratch Jr is a kid-friendly programming language for creating interactive
+								stories, games, and animations that fosters critical thinking, problem-solving,
+								computational thinking, and creativity skills.
+							</div>
+						</div>
+					</div>
+
+					<!-- Service Block Three -->
+					<div class="service-block-three item">
+						<div class="inner-box">
+							<img src="./images/resource/classes/Scratch.jpg">
+							<br>
 							<h5 class="title">Scratch</h5>
 							<div class="text">Scratch is a user-friendly visual programming language and platform
 								developed by MIT that promotes creativity and problem-solving through interactive
@@ -358,21 +371,24 @@
 					</div>
 
 					<!-- Service Block Three -->
-					<div class="service-block-three col-lg-3 col-md-6 col-sm-12">
+					<div class="service-block-three item">
 						<div class="inner-box">
-							<i class="icon flaticon-design-1"></i>
-							<h5 class="title">Scratch <br>Jr</h5>
-							<div class="text">Scratch Jr is a kid-friendly programming language for creating interactive
-								stories, games, and animations that fosters critical thinking, problem-solving,
-								computational thinking, and creativity skills.
+							<img src="./images/resource/classes/Robotics.jpg">
+							<br>
+							<h5 class="title">Robotics</h5>
+							<div class="text">Robotics leverages the powerful Makeblock mBot2 robot to introduce
+								students to the fundamentals of robotics, coding, and engineering.
+								Engage in exciting projects that involve building, coding, and testing the mBot2,
+								fostering creativity and technical skills.
 							</div>
 						</div>
 					</div>
 
 					<!-- Service Block Three -->
-					<div class="service-block-three col-lg-3 col-md-6 col-sm-12">
+					<div class="service-block-three item">
 						<div class="inner-box">
-							<i class="icon flaticon-online-shopping"></i>
+							<img src="./images/resource/classes/IntroToWebDev.jpg">
+							<br>
 							<h5 class="title">Introduction to Web Development</h5>
 							<div class="text">The Introduction to Web Development curriculum covers the basic concepts
 								of HTML, CSS, and JavaScript, including creating a simple webpage, adding interactivity,
@@ -383,10 +399,11 @@
 					</div>
 
 					<!-- Service Block Three -->
-					<div class="service-block-three col-lg-3 col-md-6 col-sm-12">
+					<div class="service-block-three item">
 						<div class="inner-box">
-							<i class="icon flaticon-campaign"></i>
-							<h5 class="title">Web Development</h5>
+							<img src="./images/resource/classes/WebDev.webp">
+							<br>
+							<h5 class="title">Web Development 1 & 2</h5>
 							<div class="text">The Web Development is a multi leveled curriculum, making more intense
 								projects and focusing on back end development using today's frameworks and libraries,
 								including but not limited too, Angular, NodeJS, and more.
@@ -679,21 +696,19 @@
 
 	<!-- Scroll To Top -->
 	<div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-angle-up"></span></div>
- 
-    <script type="text/javascript">
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement(
-                {pageLanguage: 'en'},
-                'google_translate_element'
-            );
-        }
-    </script>
- 
-    <script type="text/javascript"
-            src=
-"https://translate.google.com/translate_a/element.js?
+
+	<script type="text/javascript">
+		function googleTranslateElementInit() {
+			new google.translate.TranslateElement(
+				{ pageLanguage: 'en' },
+				'google_translate_element'
+			);
+		}
+	</script>
+
+	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?
 cb=googleTranslateElementInit">
-    </script>
+</script>
 
 	<script src="js/jquery.js"></script>
 	<script src="js/popper.min.js"></script>
