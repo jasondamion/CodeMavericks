@@ -27,7 +27,7 @@ var THEMEMASCOT = {};
 	//Hide Loading Box (Preloader)
 	function handlePreloader() {
 		if ($('.preloader').length) {
-			$('.preloader').delay(200).fadeOut(500);
+			$('.preloader').fadeOut(500);
 			setTimeout(()=>{
 			  $('#newsletter').modal('show')
 			}, 2000)
@@ -151,10 +151,9 @@ var THEMEMASCOT = {};
 			loop: true,
 			margin: 0,
 			nav: true,
+			lazyLoad: false,
 			smartSpeed: 500,
 			autoHeight: true,
-			autoplay: true,
-			autoplayTimeout: 10000,
 			navText: ['<span class="fa fa-long-arrow-alt-left"></span>', '<span class="fa fa-long-arrow-alt-right"></span>'],
 			responsive: {
 				0: {
