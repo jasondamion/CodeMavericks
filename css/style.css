@@ -3298,6 +3298,38 @@ Sticky Header
     opacity: 0;
   }
 }
+
+.sticky-header .main-menu .navigation {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-end; /* or space-between/center as you prefer */
+  align-items: center;
+  gap: 24px; /* Adjust as needed for spacing between items */
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+}
+
+.sticky-header .main-menu .navigation > li {
+  margin: 0;
+  padding: 20px 0;
+  white-space: nowrap;
+}
+
+/* Responsive: reduce gap and font size if needed */
+@media (max-width: 1200px) {
+  .sticky-header .main-menu .navigation {
+    gap: 12px;
+    font-size: 0.95em;
+  }
+}
+@media (max-width: 992px) {
+  .sticky-header .main-menu .navigation {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
 /*** 
 
 ====================================================================
@@ -6150,7 +6182,7 @@ Section Title
 ***/
 .services-section-three {
   position: relative;
-  padding: 120px 0 50px;
+  padding: 120px 0 0px;
 }
 .services-section-three .bg {
   max-height: 490px;

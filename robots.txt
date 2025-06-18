@@ -1,0 +1,15 @@
+# CodeMavericks Robots.txt
+User-agent: *
+Allow: /
+Allow: /images/
+Allow: /css/
+Allow: /js/
+
+# Sitemaps
+Sitemap: https://codemavericks.com/sitemap.xml
+
+# Disallow form submissions and sensitive areas
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /admin/
+Disallow: /*?*
