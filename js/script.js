@@ -28,10 +28,6 @@ var THEMEMASCOT = {};
 	function handlePreloader() {
 		if ($('.preloader').length) {
 			$('.preloader').fadeOut(500);
-			setTimeout(()=>{
-			  $('#newsletter').modal('show')
-			}, 2000)
-			
 		}
 	}
 

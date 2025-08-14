@@ -2388,6 +2388,9 @@ Main Header
   z-index: 999;
 }
 
+.site-logo { max-width:160px; height:auto; }
+@media (min-width:768px){ .site-logo{ max-width:200px; } }
+
 .header-top {
   position: relative;
   display: -webkit-box;
@@ -13342,3 +13345,11 @@ Sidebar
 .footer-bottom .footer-links li a:hover {
   color: #FFFFFF;
 }
+
+/* Custom Styles */
+
+.banner-section-two .title{
+  font-size: clamp(26px, 6.5vw, 48px);
+  line-height:1.1;
+}
+.banner-section-two .sub-title{ font-size:14px; letter-spacing:.5px; }
