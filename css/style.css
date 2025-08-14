@@ -3861,7 +3861,6 @@ Section Title
   font-weight: var(--sec-title-subtitle-font-weight);
   font-family: var(--sec-title-subtitle-font-family);
   color: var(--sec-title-subtitle-color);
-  text-transform: uppercase;
   letter-spacing: 0.1em;
   padding-top: 10px;
 }
@@ -3955,7 +3954,6 @@ Section Title
   line-height: 90px;
   color: #ffffff;
   font-weight: 800;
-  text-transform: uppercase;
   letter-spacing: 0.5px;
 }
 @media (max-width: 1399.98px) {
@@ -4067,7 +4065,6 @@ Section Title
   font-size: 100px;
   line-height: 0.9em;
   color: #ffffff;
-  text-transform: uppercase;
   margin-bottom: 18px;
 }
 @media (max-width: 991.98px) {
@@ -4276,7 +4273,6 @@ Section Title
   line-height: 20px;
   font-weight: 600;
   color: rgba(255, 255, 255, 0.7);
-  text-transform: uppercase;
   letter-spacing: 0.1em;
   margin-bottom: 15px;
 }
@@ -4295,7 +4291,6 @@ Section Title
   font-size: 110px;
   line-height: 0.9em;
   color: #ffffff;
-  text-transform: uppercase;
   margin-bottom: 18px;
 }
 @media (max-width: 991.98px) {
@@ -4681,7 +4676,6 @@ Section Title
   letter-spacing: 0.1em;
   background-color: var(--theme-color-light);
   display: block;
-  text-transform: uppercase;
   text-align: center;
   -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
           box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -5941,7 +5935,6 @@ Section Title
 }
 .service-banner .content .sub-title {
   display: block;
-  text-transform: uppercase;
   color: var(--theme-color1);
   font-size: 12px;
   letter-spacing: 2px;
@@ -10974,7 +10967,6 @@ Page Title
 .error-page__inner .error-page__sub-title {
   font-size: 40px;
   letter-spacing: 0.1em;
-  text-transform: uppercase;
   line-height: 50px;
   margin-top: -16px;
 }
@@ -13348,8 +13340,33 @@ Sidebar
 
 /* Custom Styles */
 
-.banner-section-two .title{
-  font-size: clamp(26px, 6.5vw, 48px);
-  line-height:1.1;
+/* --- Mobile hero sizing overrides --- */
+.banner-section-two .title {
+  font-size: clamp(28px, 7.5vw, 48px) !important;
+  line-height: 1.1 !important;
+  letter-spacing: 0 !important;
+  margin-bottom: 18px !important;
 }
-.banner-section-two .sub-title{ font-size:14px; letter-spacing:.5px; }
+
+/* tighten hero padding on phones so the CTA is above the fold */
+@media (max-width: 575.98px){
+  .banner-section-two .content-box { padding: 140px 0 90px !important; }
+  .theme-btn.btn-style-one { padding: 12px 18px !important; font-size: 16px !important; }
+}
+
+.hero-support {
+  font-size: 16px;
+  margin-top: 8px;
+  margin-bottom: 16px;
+}
+
+.hero-secondary a {
+  font-size: 14px;
+  color: #fff;
+  text-decoration: underline;
+}
+
+@media (max-width: 575.98px) {
+  .hero-support { font-size: 14px; }
+  .theme-btn.btn-style-one { padding: 12px 18px; font-size: 16px; }
+}
