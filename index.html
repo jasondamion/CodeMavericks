@@ -72,6 +72,66 @@
 	<!-- Stylesheets -->
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
+
+	<!-- Small local tweaks for Services grid cards -->
+	<style>
+	  /* Make service cards stand out from the background */
+			.service-block-three .inner-box {
+				/* stronger visible border so cards don't blend into patterned or white backgrounds */
+				border: 1px solid #cfcfcf;
+				/* slightly stronger default shadow so the card edge reads on light backgrounds */
+				box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+				padding: 18px;
+				margin-bottom: 24px;
+				border-radius: 10px;
+				background-color: #ffffff;
+				transition: transform 0.18s ease, box-shadow 0.18s ease;
+				height: 100%;
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-start;
+			}
+
+	  .service-block-three .inner-box:hover {
+	    transform: translateY(-6px);
+	    box-shadow: 0 12px 30px rgba(20,20,20,0.12);
+	  }
+
+		.service-block-three .inner-box img.img-fluid {
+			/* avoid cropping: use contain so whole image is visible; provide a neutral background */
+			width: 100%;
+			height: auto;
+			max-height: 220px;
+			object-fit: contain;
+			background-color: #f7f7f7;
+			padding: 6px;
+			border-radius: 6px;
+			display: block;
+			margin-left: 0;
+		}
+
+	  .service-block-three .title {
+	    margin-top: 12px;
+	    margin-bottom: 8px;
+	  }
+
+	  /* Ensure equal height columns inside the row */
+	  #services .row {
+	    --bs-gutter-y: 24px;
+	  }
+
+	  /* Make the services row use flex so we can center the last row when needed */
+	  #services-grid-row {
+	    display: flex;
+	    flex-wrap: wrap;
+	    align-items: stretch;
+	  }
+
+	  /* helper class applied when last row has fewer items than columns */
+	  #services-grid-row.justify-last-row-center {
+	    justify-content: center;
+	  }
+	</style>
 	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 
 	<!-- Responsive -->
@@ -246,7 +306,7 @@
 		<!-- About Section Four-->
 		<section id="about" class="about-section-four">
 			<div class="auto-container">
-				<div class="row">
+				<div id="services-grid-row" class="row">
 					<!-- Content Column -->
 					<div class="content-column col-lg-6 col-md-12 wow fadeInRight">
 						<div class="inner-column">
@@ -366,24 +426,23 @@
 				<div class="sec-title light">
 					<div class="row">
 						<div class="col-xl-5 col-lg-12">
-							<span class="sub-title">our Classes</span>
+							<span class="sub-title">Our Classes</span>
 							<h2>Classes We Offer</h2>
 						</div>
 						<div class="col-xl-7 col-lg-12">
-							<div class="text text-center" style="color: var(--body-text-color)">In addition, we travel
-								to other educational businesses to run
-								workshops and 6 week class cycles. Also, offering tutoring for web development and
-								computer science. <br> Scroll right to see more.</div>
+							<div class="text text-center" style="color: var(--body-text-color)">We offer on-site workshops,
+								 multi-week class programs, and personalized tutoring for web development and computer science,
+								  bringing our instruction directly to schools and educational centers.</div>
 						</div>
 					</div>
 				</div>
 
-				<div class="row owl-carousel class-carousel owl-theme text-center">
+				<div class="row">
 
 					<!-- Service Block Three -->
-					<div class="service-block-three item">
+					<div class="service-block-three col-lg-4 col-md-6 col-sm-12">
 						<div class="inner-box">
-							<img src="./images/resource/classes/TechLiteracy.jpg">
+							<img src="./images/resource/classes/TechLiteracy.jpg" class="img-fluid" alt="Technology Literacy for Older Adults">
 							<br>
 							<h5 class="title">Technology Literacy for Older Adults</h5>
 							<div class="text">A patient, friendly workshop series to help older adults
@@ -396,9 +455,9 @@
 					</div>
 
 					<!-- Service Block Three -->
-					<div class="service-block-three item">
+					<div class="service-block-three col-lg-4 col-md-6 col-sm-12">
 						<div class="inner-box">
-							<img src="./images/resource/classes/ScratchJr.jpg">
+							<img src="./images/resource/classes/ScratchJr.jpg" class="img-fluid" alt="Scratch Jr">
 							<br>
 							<h5 class="title">Scratch Jr</h5>
 							<div class="text">Scratch Jr is a kid-friendly programming language for creating interactive
@@ -411,9 +470,9 @@
 					</div>
 
 					<!-- Service Block Three -->
-					<div class="service-block-three item">
+					<div class="service-block-three col-lg-4 col-md-6 col-sm-12">
 						<div class="inner-box">
-							<img src="./images/resource/classes/Scratch.jpg">
+							<img src="./images/resource/classes/Scratch.jpg" class="img-fluid" alt="Scratch">
 							<br>
 							<h5 class="title">Scratch</h5>
 							<div class="text">Scratch is a user-friendly visual programming language and platform
@@ -426,9 +485,9 @@
 					</div>
 
 					<!-- Service Block Three -->
-					<div class="service-block-three item">
+					<div class="service-block-three col-lg-4 col-md-6 col-sm-12">
 						<div class="inner-box">
-							<img src="./images/resource/classes/Python.jpg">
+							<img src="./images/resource/classes/Python.jpg" class="img-fluid" alt="Coding with Python">
 							<br>
 							<h5 class="title">Coding with Python</h5>
 							<div class="text">Build practical coding skills from the ground up in our 6‑week Python
@@ -442,9 +501,9 @@
 					</div>
 
 					<!-- Service Block Three -->
-					<div class="service-block-three item">
+					<div class="service-block-three col-lg-4 col-md-6 col-sm-12">
 						<div class="inner-box">
-							<img src="./images/resource/classes/Robotics.jpg">
+							<img src="./images/resource/classes/Robotics.jpg" class="img-fluid" alt="Robotics with Mbot2">
 							<br>
 							<h5 class="title">Robotics with Mbot2</h5>
 							<div class="text">Robotics leverages the powerful Makeblock mBot2 robot to introduce
@@ -460,9 +519,9 @@
 
 
 					<!-- Service Block Three -->
-					<div class="service-block-three item">
+					<div class="service-block-three col-lg-4 col-md-6 col-sm-12">
 						<div class="inner-box">
-							<img src="./images/resource/classes/IntroToWebDev.jpg">
+							<img src="./images/resource/classes/IntroToWebDev.jpg" class="img-fluid" alt="Introduction to Web Development">
 							<br>
 							<h5 class="title">Introduction to Web Development</h5>
 							<div class="text">The Introduction to Web Development curriculum covers the basic concepts
@@ -476,9 +535,9 @@
 					</div>
 
 					<!-- Service Block Three -->
-					<div class="service-block-three item">
+					<div class="service-block-three col-lg-4 col-md-6 col-sm-12">
 						<div class="inner-box">
-							<img src="./images/resource/classes/WebDev.webp">
+							<img src="./images/resource/classes/WebDev.webp" class="img-fluid" alt="Web Development 1 & 2">
 							<br>
 							<h5 class="title">Web Development 1 & 2</h5>
 							<div class="text">The Web Development is a multi leveled curriculum, making more intense
@@ -907,6 +966,54 @@ cb=googleTranslateElementInit">
 	<script src="js/select2.min.js"></script>
 	<script src="js/owl.js"></script>
 	<script src="js/script.js"></script>
+
+	<!-- Small script: center last row of services grid when it isn't full -->
+	<script>
+	  (function() {
+	    const container = document.getElementById('services-grid-row');
+	    if (!container) return;
+
+	    function getColumns() {
+	      const w = window.innerWidth;
+	      if (w >= 992) return 3; // lg
+	      if (w >= 768) return 2; // md
+	      return 1; // sm
+	    }
+
+	    function recompute() {
+	      // remove class first
+	      container.classList.remove('justify-last-row-center');
+
+	      const items = Array.from(container.querySelectorAll('.service-block-three'));
+	      if (!items.length) return;
+
+	      // group by offsetTop to find rows
+	      const rows = [];
+	      items.forEach(item => {
+	        const t = item.offsetTop;
+	        const last = rows[rows.length - 1];
+	        if (!last || last.top !== t) rows.push({ top: t, items: [item] });
+	        else last.items.push(item);
+	      });
+
+	      const lastRow = rows[rows.length - 1];
+	      const cols = getColumns();
+	      if (lastRow && lastRow.items.length < cols) {
+	        container.classList.add('justify-last-row-center');
+	      }
+	    }
+
+	    // run on load and resize (debounced)
+	    window.addEventListener('load', recompute);
+	    let tId = null;
+	    window.addEventListener('resize', function() {
+	      clearTimeout(tId);
+	      tId = setTimeout(recompute, 120);
+	    });
+	    // also run shortly after DOM ready to account for fonts/images
+	    setTimeout(recompute, 300);
+	  })();
+	</script>
 </body>
 
 </html>
