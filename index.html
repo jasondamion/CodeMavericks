@@ -70,6 +70,19 @@
 
 	<!-- Small local tweaks for Services grid cards -->
 	<style>
+	/* Make CTA buttons wrap on small screens */
+	.theme-btn {
+		white-space: normal; /* allow wrapping */
+		word-break: break-word;
+	}
+
+	@media (max-width: 480px) {
+		.theme-btn {
+			padding: 10px 14px; /* reduce horizontal padding on very small screens */
+			font-size: 15px;
+		}
+	}
+
 	  /* Make service cards stand out from the background */
 			.service-block-three .inner-box {
 				/* stronger visible border so cards don't blend into patterned or white backgrounds */
@@ -249,6 +262,8 @@
   .team-block .image-box img {
       border-radius: var(--theme-radius) var(--theme-radius) 0 0;
   }
+
+
   
   /* 5. Accordion / FAQ - Bubbly Style */
   .accordion-item {
@@ -434,6 +449,8 @@
 </head>
 
 <body>
+	<!-- Skip link for keyboard users -->
+	<a class="skip-link" href="#main-content" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;">Skip to content</a>
 	<div class="page-wrapper">
 
 		<!-- Preloader -->
@@ -444,9 +461,7 @@
 			<!-- Main box -->
 			<div class="main-box">
 				<div class="logo-box">
-					<div class="logo"><a href="index.html"><img alt="CodeMavericks Programming Education Logo"
-								src="images/logo-inverted.png" width="300vw" height="220vh" alt=""
-								title="CodeMavericks"></a>
+					<div class="logo"><a href="index.html"><img src="images/logo-inverted.png" alt="CodeMavericks Programming Education Logo" width="300" height="220" title="CodeMavericks"></a>
 					</div>
 				</div>
 
@@ -457,11 +472,11 @@
 						<ul class="navigation">
 							<li class="current"><a href="#home">Home</a></li>
 							<li><a href="#about">About</a></li>
-							<li><a href="#services">Services</a>
+							<li><a href="#services">Services</a></li>
 							<li><a href="#team">Team</a></li>
 							<li><a href="#faq">FAQ</a></li>
-							<li><a target="_blank" href="https://codemavericks.corsizio.com">Register</a></li>
-							<li><a target="_blank" href="https://app.autobooks.co/pay/codemavericks">Payment</a></li>
+							<li><a target="_blank" rel="noopener noreferrer" aria-label="Register (opens in new tab)" href="https://codemavericks.corsizio.com">Register</a></li>
+							<!-- Payment link removed -->
 							<li><a href="#contact">Contact</a></li>
 						</ul>
 					</nav>
@@ -486,8 +501,7 @@
 				<!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
 				<nav class="menu-box">
 					<div class="upper-box">
-						<div class="nav-logo"><a href="index.html"><img alt="CodeMavericks Programming Education Logo"
-									src="images/logo-inverted.png" alt="" title=""></a></div>
+						<div class="nav-logo"><a href="index.html"><img src="images/logo-inverted.png" alt="CodeMavericks Programming Education Logo" title="CodeMavericks"></a></div>
 						<div class="close-btn"><i class="icon fa fa-times"></i></div>
 					</div>
 
@@ -515,10 +529,8 @@
 
 
 					<ul class="social-links">
-						<li><a target="_blank" href="https://www.linkedin.com/company/94206843/"><i
-									class="fab fa-linkedin"></i></a></li>
-						<li><a target="_blank" href="https://www.instagram.com/codemavricks/"><i
-									class="fab fa-instagram"></i></a></li>
+										<li><a target="_blank" rel="noopener noreferrer" aria-label="LinkedIn (opens in new tab)" href="https://www.linkedin.com/company/94206843/"><i class="fab fa-linkedin"></i></a></li>
+										<li><a target="_blank" rel="noopener noreferrer" aria-label="Instagram (opens in new tab)" href="https://www.instagram.com/codemavricks/"><i class="fab fa-instagram"></i></a></li>
 					</ul>
 				</nav>
 			</div><!-- End Mobile Menu -->
@@ -1272,10 +1284,9 @@
 										<li><a href="#services">Services</a></li>
 										<li><a href="#team">Team</a></li>
 										<li><a href="#faq">FAQ</a></li>
-										<li><a target="_blank" href="https://codemavericks.corsizio.com">Register</a>
-										</li>
-										<li><a target="_blank"
-												href="https://app.autobooks.co/pay/codemavericks">Payment</a></li>
+					<li><a target="_blank" rel="noopener noreferrer" aria-label="Register (opens in new tab)" href="https://codemavericks.corsizio.com">Register</a>
+					</li>
+					<!-- Payment link removed -->
 										<li><a href="#contact">Contact</a></li>
 									</ul>
 								</div>
