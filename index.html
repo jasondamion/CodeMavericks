@@ -25,7 +25,7 @@
 	<!-- Add Open Graph tags for better social sharing -->
 	<meta property="og:title" content="CodeMavericks - Accessible Programming Education">
 	<meta property="og:description"
-		content="Learn coding with CodeMavericks. Offering programming classes for all ages in Central Jersey. Join our inclusive tech community today!">
+		content="Learn coding with CodeMavericks. Offering programming classes for all ages in Cary, NC. Join our inclusive tech community today!">
 	<meta property="og:image" content="images/logo-inverted.png">
 	<meta property="og:url" content="https://codemavericks.io">
 
@@ -33,7 +33,7 @@
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:title" content="CodeMavericks - Programming Education">
 	<meta name="twitter:description"
-		content="Learn coding with CodeMavericks. Programming classes for all ages in Central Jersey.">
+		content="Learn coding with CodeMavericks. Programming classes for all ages in Cary, NC.">
 	<meta name="twitter:image" content="images/logo-inverted.png">
 
 	<!-- Schema.org markup for Google -->
@@ -45,6 +45,14 @@
       "description": "Providing accessible programming and coding education for youth and adults",
       "url": "https://codemavericks.io",
       "logo": "https://codemavericks.io/images/logo-inverted.png",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1793 NW Maynard Rd",
+        "addressLocality": "Cary",
+        "addressRegion": "NC",
+        "postalCode": "27513",
+        "addressCountry": "US"
+      },
       "sameAs": [
         "https://www.linkedin.com/company/94206843/",
         "https://www.instagram.com/codemavricks/"
@@ -138,6 +146,20 @@
 	  /* helper class applied when last row has fewer items than columns */
   #services-grid-row.justify-last-row-center {
     justify-content: center;
+  }
+
+  /* Age Range Styling - Black Text */
+  .age-range {
+    color: #000000;
+  }
+
+  /* Footer Contact Info Text - Black */
+  .contact-info-block .inner .text {
+    color: #000000;
+  }
+
+  .contact-info-block .inner .text a {
+    color: #000000;
   }
 
   /* Partners Section Styles */
@@ -477,6 +499,7 @@
 							<li><a href="#faq">FAQ</a></li>
 							<li><a target="_blank" rel="noopener noreferrer" aria-label="Register (opens in new tab)" href="https://codemavericks.corsizio.com">Register</a></li>
 							<!-- Payment link removed -->
+							<li><a href="gallery.html">Gallery</a></li>
 							<li><a href="#contact">Contact</a></li>
 						</ul>
 					</nav>
@@ -597,7 +620,7 @@
 								<a href="https://codemavericks.corsizio.com" target="_blank"
 									class="theme-btn btn-style-one">Register for Classes</a>
 								<a href="#" data-bs-toggle="modal" data-bs-target="#newsletter"
-									class="theme-btn btn-style-one light-bg">🎁 Get 20% Off!</a>
+									class="theme-btn btn-style-one light-bg">Join Newsletter</a>
 							</div>
 							<p class="hero-secondary"><a href="https://codemavericks.corsizio.com">See class dates &amp;
 									locations →</a></p>
@@ -633,7 +656,7 @@
 							</ul>
 							<button type="button" class="theme-btn btn-style-one" data-bs-toggle="modal"
 								data-bs-target="#newsletter">
-								🎁 Get 20% Off + Newsletter Updates!
+								Subscribe for updates
 							</button>
 						</div>
 					</div>
@@ -825,6 +848,17 @@
 						</div>
 					</div>
 
+					<!-- Richard B Harrison Library -->
+					<div class="partner-block col-lg-3 col-md-4 col-sm-6">
+						<div class="inner-box">
+							<span class="icon fa fa-map-marker-alt"></span>
+							<h5 class="title">Richard B Harrison Library</h5>
+							<span class="location">Raleigh, NC</span>
+						</div>
+					</div>
+
+
+
 				</div>
 			</div>
 		</section>
@@ -846,24 +880,10 @@
 					<!-- Service Block Three -->
 					<div class="service-block-three col-lg-4 col-md-6 col-sm-12">
 						<div class="inner-box">
-							<img src="./images/resource/classes/TechLiteracy.jpg" class="img-fluid" alt="Technology Literacy for Older Adults">
-							<br>
-							<h5 class="title">Technology Literacy for Older Adults</h5>
-							<div class="text">A patient, friendly workshop series to help older adults
-								 feel comfortable and confident with modern technology — phones, email, video calls,
-								  online safety, and more.
-								<br>
-								<strong>Price: $120 / 10-week session</strong>
-							</div>
-						</div>
-					</div>
-
-					<!-- Service Block Three -->
-					<div class="service-block-three col-lg-4 col-md-6 col-sm-12">
-						<div class="inner-box">
 							<img src="./images/resource/classes/ScratchJr.jpg" class="img-fluid" alt="Scratch Jr">
 							<br>
 							<h5 class="title">Scratch Jr</h5>
+							<span class="age-range"><strong>Ages:</strong> 5-7</span>
 							<div class="text">Scratch Jr is a kid-friendly programming language for creating interactive
 								stories, games, and animations that fosters critical thinking, problem-solving,
 								computational thinking, and creativity skills.
@@ -879,6 +899,7 @@
 							<img src="./images/resource/classes/Scratch.jpg" class="img-fluid" alt="Scratch">
 							<br>
 							<h5 class="title">Scratch</h5>
+							<span class="age-range"><strong>Ages:</strong> 8-15</span>
 							<div class="text">Scratch is a user-friendly visual programming language and platform
 								developed by MIT that promotes creativity and problem-solving through interactive
 								storytelling, gaming, and animations.
@@ -891,9 +912,27 @@
 					<!-- Service Block Three -->
 					<div class="service-block-three col-lg-4 col-md-6 col-sm-12">
 						<div class="inner-box">
+							<img src="./images/resource/classes/Robotics.jpg" class="img-fluid" alt="Robotics with Mbot2">
+							<br>
+							<h5 class="title">Robotics with Mbot2</h5>
+							<span class="age-range"><strong>Ages:</strong> 8-15</span>
+							<div class="text">Robotics leverages the powerful Makeblock mBot2 robot to introduce
+								students to the fundamentals of robotics, coding, and engineering.
+								Engage in exciting projects that involve building, coding, and testing the mBot2,
+								fostering creativity and technical skills.
+								<br>
+								<strong>Price: $150 / 6-week session</strong>
+							</div>
+						</div>
+					</div>
+
+					<!-- Service Block Three -->
+					<div class="service-block-three col-lg-4 col-md-6 col-sm-12">
+						<div class="inner-box">
 							<img src="./images/resource/classes/Python.jpg" class="img-fluid" alt="Coding with Python">
 							<br>
 							<h5 class="title">Coding with Python</h5>
+							<span class="age-range"><strong>Ages:</strong> 10-18</span>
 							<div class="text">Build practical coding skills from the ground up in our 6‑week Python
 								course.
 								Learn real-world programming fundamentals, build mini‑games,
@@ -907,27 +946,10 @@
 					<!-- Service Block Three -->
 					<div class="service-block-three col-lg-4 col-md-6 col-sm-12">
 						<div class="inner-box">
-							<img src="./images/resource/classes/Robotics.jpg" class="img-fluid" alt="Robotics with Mbot2">
-							<br>
-							<h5 class="title">Robotics with Mbot2</h5>
-							<div class="text">Robotics leverages the powerful Makeblock mBot2 robot to introduce
-								students to the fundamentals of robotics, coding, and engineering.
-								Engage in exciting projects that involve building, coding, and testing the mBot2,
-								fostering creativity and technical skills.
-								<br>
-								<strong>Price: $150 / 6-week session</strong>
-							</div>
-						</div>
-					</div>
-
-
-
-					<!-- Service Block Three -->
-					<div class="service-block-three col-lg-4 col-md-6 col-sm-12">
-						<div class="inner-box">
 							<img src="./images/resource/classes/IntroToWebDev.jpg" class="img-fluid" alt="Introduction to Web Development">
 							<br>
 							<h5 class="title">Introduction to Web Development</h5>
+							<span class="age-range"><strong>Ages:</strong> 13-18</span>
 							<div class="text">The Introduction to Web Development curriculum covers the basic concepts
 								of HTML, CSS, and JavaScript, including creating a simple webpage, adding interactivity,
 								and styling elements. Students will apply these skills in a final project, where they
@@ -944,11 +966,28 @@
 							<img src="./images/resource/classes/WebDev.webp" class="img-fluid" alt="Web Development 1 & 2">
 							<br>
 							<h5 class="title">Web Development 1 & 2</h5>
+							<span class="age-range"><strong>Ages:</strong> 18+ <em>(or completed Introduction to Web Development)</em></span>
 							<div class="text">The Web Development is a multi leveled curriculum, making more intense
 								projects and focusing on back end development using today's frameworks and libraries,
 								including but not limited too, Angular, NodeJS, and more.
 								<br>
 								<strong>Price: $280 / 8-week session</strong>
+							</div>
+						</div>
+					</div>
+
+					<!-- Service Block Three -->
+					<div class="service-block-three col-lg-4 col-md-6 col-sm-12">
+						<div class="inner-box">
+							<img src="./images/resource/classes/TechLiteracy.jpg" class="img-fluid" alt="Technology Literacy for Older Adults">
+							<br>
+							<h5 class="title">Technology Literacy for Older Adults</h5>
+							<span class="age-range"><strong>Ages:</strong> 50+</span>
+							<div class="text">A patient, friendly workshop series to help older adults
+								 feel comfortable and confident with modern technology — phones, email, video calls,
+								  online safety, and more.
+								<br>
+								<strong>Price: $120 / 10-week session</strong>
 							</div>
 						</div>
 					</div>
@@ -1115,11 +1154,10 @@
 						<div id="faq6" class="accordion-collapse collapse" aria-labelledby="faq6-heading"
 							data-bs-parent="#faqAccordion">
 							<div class="accordion-body">
-								Sign up for our newsletter to receive the latest updates and get an exclusive 20%
-								discount code!
+								Sign up for our newsletter to receive the latest updates and occasional promotions.
 								<button type="button" class="theme-btn btn-style-one" data-bs-toggle="modal"
 									data-bs-target="#newsletter" style="margin-left: 8px;">
-									subscribing & Get 20% Off!
+									Subscribe & Join Newsletter
 								</button>
 							</div>
 						</div>
@@ -1204,7 +1242,7 @@
 									</div>
 									<div class="text">
 										<h6>Location</h6>
-										<span>TBD</span>
+										<span>NC STEM Academy<br>1793 NW Maynard Rd, Cary, NC 27513</span>
 									</div>
 								</li>
 							</ul>
@@ -1235,7 +1273,7 @@
 						<div class="contact-info-block col-lg-6 col-md-6">
 							<div class="inner">
 								<i class="icon lnr-icon-map"></i>
-								<div class="text">Location <br /> TBD</div>
+								<div class="text">NC STEM Academy<br/>1793 NW Maynard Rd, Cary, NC 27513</div>
 							</div>
 						</div>
 						<!-- Contact info Block -->
@@ -1301,14 +1339,13 @@
 						<!-- Footer COlumn -->
 						<div class="footer-column col-xl-4 col-lg-4 col-md-6 col-sm-12">
 							<div class="widget newsletter-widget">
-								<h6 class="widget-title">🎁 Newsletter + Special Offer</h6>
+								<h6 class="widget-title">Newsletter</h6>
 								<div class="widget-content">
-									<div class="text">Subscribe to get updates AND your exclusive 20% discount code!
-									</div>
+									<div class="text">Subscribe for updates, class news, and upcoming events.</div>
 									<!-- Button trigger modal -->
 									<button type="button" class="theme-btn btn-style-one" data-bs-toggle="modal"
 										data-bs-target="#newsletter">
-										subscribing & Save!
+										Subscribe
 									</button>
 								</div>
 							</div>
